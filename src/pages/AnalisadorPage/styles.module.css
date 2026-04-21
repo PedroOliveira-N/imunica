@@ -1,0 +1,16 @@
+.header{
+    font-size: xx-large;
+    color: #1E3A8A;
+}
+
+.textarea {
+    background: #F9FAFB
+}
+
+.textarea::placeholder {
+    color: #6b7280;
+}
+
+.button {
+    background-color: #1E3A8A;
+}
