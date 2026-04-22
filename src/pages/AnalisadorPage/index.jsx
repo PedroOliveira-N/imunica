@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from './styles.module.css'
-import { Button, Field, Heading, Textarea } from "@chakra-ui/react";
+import { Button, Clipboard, Field, Heading, Textarea } from "@chakra-ui/react";
 
 export default function AnalisadorPage () {
     const [texto , setTexto] = useState("");
@@ -15,13 +15,15 @@ export default function AnalisadorPage () {
         const compartilhamento = ["compartilhe", "envie", "poste"];
         const urgentismo = ["urgente", "!!!", "faça"];
 
+        if (!texto.trim()) return;
+
         if (compartilhamento.some(t => textoLower.includes(t))) {
-            riscos += 2
+            riscos += 1
             motivos.push("Incentivo ao compartilhamento em massa.")
         }
 
         if (urgentismo.some(t => textoLower.includes(t))) {
-            riscos += 2
+            riscos += 1
             motivos.push("Linguagem urgente.")
         }
 
@@ -37,12 +39,22 @@ export default function AnalisadorPage () {
       }
 
     return(
-        <div>
+        <div className={styles.body}>
           <h1 className={styles.header}>Analisador</h1>
 
-          <p></p>
+          <p className={styles.paragraph}>O analisador vai descobrir quais as chances de uma mensagem ser falsa. <br/>Cole uma mensagem e teste agora!</p>
 
-            <Textarea
+          <div className={styles.analisador}>
+            <Clipboard.Root value={texto}>
+              <Clipboard.Trigger asChild>
+                <Button variant="surface" size="sm" className={styles.copyButton}>
+                <Clipboard.Indicator />
+                <Clipboard.CopyText />
+                </Button>
+              </Clipboard.Trigger>
+            </Clipboard.Root>
+
+            <textarea
               value={texto}
               onChange={(e) => setTexto(e.target.value)}
               placeholder="Cole aqui a mensagem..."
@@ -51,8 +63,11 @@ export default function AnalisadorPage () {
 
             <Button 
               onClick={analisar}
-              className={styles.button}>
-              Analisar</Button>
+              disabled={!texto.trim()}
+              className={styles.analyzeButton}>
+              Analisar
+            </Button>
+          </div>
 
             {resultado && (
               <div>
