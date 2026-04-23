@@ -1,9 +1,13 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Span } from "@chakra-ui/react";
+import styles from './styles.module.css'
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
+import Sidebar from "../SideBar";
 
 export default function Header () {
     return(
-        <div>
-            <h1>Imúnica</h1>
-        </div>
+    <header className={styles.header}>
+        <Sidebar />
+    </header>
     )
 }

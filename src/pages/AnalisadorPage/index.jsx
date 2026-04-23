@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from './styles.module.css'
-import { Button, Clipboard, Field, Heading, Textarea } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 export default function AnalisadorPage () {
     const [texto , setTexto] = useState("");
@@ -9,6 +9,7 @@ export default function AnalisadorPage () {
     function analisar () {
         let riscos = 0;
         let motivos = [];
+        let nivel = "Baixo"
 
         const textoLower = texto.toLowerCase()
 
@@ -18,12 +19,12 @@ export default function AnalisadorPage () {
         if (!texto.trim()) return;
 
         if (compartilhamento.some(t => textoLower.includes(t))) {
-            riscos += 1
+            riscos += 2
             motivos.push("Incentivo ao compartilhamento em massa.")
         }
 
         if (urgentismo.some(t => textoLower.includes(t))) {
-            riscos += 1
+            riscos += 2
             motivos.push("Linguagem urgente.")
         }
 
@@ -31,10 +32,17 @@ export default function AnalisadorPage () {
             riscos += 1
             motivos.push("Falta de fontes")
         }
+
+        if (riscos >= 4) {
+          nivel = "Alto"
+        } else if (riscos >= 2) {
+          nivel = "Médio"
+        }
       
         setResultado({
           riscos,
-          motivos
+          motivos,
+          nivel
         })
       }
 
@@ -45,16 +53,10 @@ export default function AnalisadorPage () {
           <p className={styles.paragraph}>O analisador vai descobrir quais as chances de uma mensagem ser falsa. <br/>Cole uma mensagem e teste agora!</p>
 
           <div className={styles.analisador}>
-            <Clipboard.Root value={texto}>
-              <Clipboard.Trigger asChild>
-                <Button variant="surface" size="sm" className={styles.copyButton}>
-                <Clipboard.Indicator />
-                <Clipboard.CopyText />
-                </Button>
-              </Clipboard.Trigger>
-            </Clipboard.Root>
 
             <textarea
+              id="mensagem"
+              name="mensagem"
               value={texto}
               onChange={(e) => setTexto(e.target.value)}
               placeholder="Cole aqui a mensagem..."
@@ -71,8 +73,28 @@ export default function AnalisadorPage () {
 
             {resultado && (
               <div>
-                <p>Riscos: {resultado.riscos}</p>
+                <p style={{
+                  color:
+                    resultado.nivel === "Alto"
+                      ? "red"
+                    : resultado.nivel === "Médio"
+                      ? "orange"
+                      : "green"
+                      }}>
+                        Nível: {resultado.nivel}
+                </p>
 
+                <br/>
+
+                <p>
+                  {resultado.nivel === "Alto" && "Alto risco de desinformação."}
+                  {resultado.nivel === "Médio" && "Possível desinformação. Verifique antes de compartilhar."}
+                  {resultado.nivel === "Baixo" && "Poucos sinais de desinformação."}
+                </p>
+
+                <br/>
+
+                <strong style={{ fontSize:"110%"}}>{resultado.riscos >= 1 && "Motivos:"}</strong>
                 <ul>
                   {resultado.motivos.map((m, i) => (
                     <li key={i}>{m}</li>
