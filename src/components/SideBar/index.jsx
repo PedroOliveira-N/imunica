@@ -10,7 +10,7 @@ import {
 import { useRef } from "react";
 import { FaGlasses, FaHome } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
-import { IoSchool } from "react-icons/io5";
+import { IoReorderThree, IoSchool } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -19,14 +19,15 @@ export default function Sidebar() {
     return (
     <div>
         <Drawer.Root initialFocusEl={() => ref.current}>
-            <Drawer.Trigger asChild>
+            <Drawer.Trigger asChild className={styles.trigger}>
                 <Button 
+                    className={styles.button}
                     variant="outline" 
                     size="sm"
                     onClick={(e) => {
                         e.currentTarget.blur();
                     }}>
-                    Menu de Navegação
+                    <IoReorderThree className={styles.menu}/>
                 </Button>
             </Drawer.Trigger>
 
@@ -35,7 +36,7 @@ export default function Sidebar() {
                     <Drawer.Positioner>
                         <Drawer.Content className={styles.content}>
                             <Drawer.Header className={styles.header}>
-                                <Drawer.Title>Menu de Navegação</Drawer.Title>
+                                <Drawer.Title className={styles.title}>Menu de Navegação</Drawer.Title>
                             </Drawer.Header>
                             <Drawer.Body className={styles.body}>
                                 <h1>Páginas da Imúnica:</h1>

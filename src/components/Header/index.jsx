@@ -7,7 +7,16 @@ import Sidebar from "../SideBar";
 export default function Header () {
     return(
     <header className={styles.header}>
-        <Sidebar />
+        <div className={styles.logo}>
+            <img src="/icon.png"/>
+
+            <div>
+                <h1 className={styles.title}>Imúnica</h1>
+                <h2 className={styles.slogan}>Imunização Digital</h2>
+            </div>
+        </div>
+
+        <Sidebar className={styles.sideBar}/>
     </header>
     )
 }
