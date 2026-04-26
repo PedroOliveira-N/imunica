@@ -49,7 +49,7 @@ export default function Sidebar() {
                                         <FaGlasses className={styles.icons}/>
                                         Analisador de Textos
                                     </Link>
-                                    <Link to="/jogos" className={styles.link}>
+                                    <Link to="/area-educativa" className={styles.link}>
                                         <IoSchool className={styles.icons}/>
                                         Área Educativa
                                     </Link>
