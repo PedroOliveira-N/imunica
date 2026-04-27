@@ -48,7 +48,7 @@ export default function AnalisadorPage () {
 
     return(
         <div className={styles.body}>
-          <h1 className={styles.header}>Analisador</h1>
+          <h1 className={styles.header}>Analisador de Textos</h1>
 
           <p className={styles.paragraph}>O analisador vai descobrir quais as chances de uma mensagem ser falsa. <br/>Cole uma mensagem e teste agora!</p>
 

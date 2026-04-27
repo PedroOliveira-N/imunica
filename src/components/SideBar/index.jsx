@@ -43,7 +43,7 @@ export default function Sidebar() {
                                 <nav className={styles.nav}>
                                     <Link to="/" className={styles.link}>
                                         <FaHome className={styles.icons}/>
-                                        Início
+                                            Página Inicial
                                     </Link>
                                     <Link to="/analisador" className={styles.link}>
                                         <FaGlasses className={styles.icons}/>
@@ -53,9 +53,9 @@ export default function Sidebar() {
                                         <IoSchool className={styles.icons}/>
                                         Área Educativa
                                     </Link>
-                                    <Link to="/aprender" className={styles.link}>
+                                    <Link to="/sobre" className={styles.link}>
                                         <FaPeopleGroup className={styles.icons}/>
-                                        Sobre
+                                        Sobre o Site
                                     </Link>
                                 </nav>
                                 <img src="/icon.threepoints.png" alt="logo" />
