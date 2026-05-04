@@ -55,7 +55,7 @@ export default function Sidebar() {
                                     </Link>
                                     <Link to="/sobre" className={styles.link}>
                                         <FaPeopleGroup className={styles.icons}/>
-                                        Sobre o Site
+                                        Informações Importantes
                                     </Link>
                                 </nav>
                                 <img src="/icon.threepoints.png" alt="logo" />

@@ -34,4 +34,18 @@
 .icon img {
     max-width: 150px;
     width: 90%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.segment {
+    margin-top: 7px;
+}
+
+.segment:hover {
+    transform: scale(1.05);
+}
+
+.segment:disabled {
+    opacity: 0.5;
 }
