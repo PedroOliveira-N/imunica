@@ -1,0 +1,32 @@
+.centerfied {
+    text-align: center;
+    margin: 12px;
+}
+
+.h1 {
+    font-size: xx-large;
+    color: #1E3A8A;
+}
+
+.spaceGrotesk {
+    font-family: 'Space Grotesk';
+    font-size: larger;
+    letter-spacing: 7%;
+    font-weight: 600;
+}
+
+.backgroundImg {
+    margin-bottom: 17px;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    opacity: 0;
+    animation: fadeIn 2.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

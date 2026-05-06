@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import Sidebar from "../SideBar";
+import { IoReorderThree } from "react-icons/io5";
 
 export default function Header () {
     return(
@@ -16,7 +17,9 @@ export default function Header () {
             </div>
         </div>
 
-        <Sidebar className={styles.sideBar}/>
+        <Sidebar className={styles.sideBar}>
+            <IoReorderThree className={styles.menu}/>
+        </Sidebar>
     </header>
     )
 }

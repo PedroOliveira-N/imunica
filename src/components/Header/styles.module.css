@@ -9,6 +9,11 @@
 
     border-bottom: 2px solid #000;
     margin-bottom: 2%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
 }
 
 .header img {
@@ -35,4 +40,9 @@
 .slogan {
     opacity: 0.8;
     font-size: 0.9rem;
+}
+
+.menu {
+    width: 25px;
+    height: 50px;
 }

@@ -10,10 +10,10 @@ import {
 import { useRef } from "react";
 import { FaGlasses, FaHome } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
-import { IoReorderThree, IoSchool } from "react-icons/io5";
+import { IoSchool } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar({ children }) {
   const ref = useRef(null)
   
     return (
@@ -27,7 +27,7 @@ export default function Sidebar() {
                     onClick={(e) => {
                         e.currentTarget.blur();
                     }}>
-                    <IoReorderThree className={styles.menu}/>
+                    {children}
                 </Button>
             </Drawer.Trigger>
 
