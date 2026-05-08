@@ -23,10 +23,6 @@
 
 .linkButton {
     background-color: #1E3A8A;
-    min-width: 190px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
