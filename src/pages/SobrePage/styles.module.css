@@ -10,12 +10,12 @@
 
 .icons {
     display: flex;
-    flex-direction: row;
     gap: 18px;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
     text-align: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .icon{
@@ -28,17 +28,20 @@
 .icon p {
     font-family: 'Space Grotesk';
     letter-spacing: 4%;
+    max-width: 115px;
+    font-family: 90%;
     font-weight: 600;
 }
 
 .icon img {
-    max-width: 150px;
+    max-width: 115px;
     width: 90%;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 .segment {
+    width: 50%;
     margin-top: 7px;
 }
 

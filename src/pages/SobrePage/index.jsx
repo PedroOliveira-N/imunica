@@ -31,16 +31,6 @@ export default function SobrePage() {
                         Sobre o Projeto
                     </Button>
 
-                    <Button
-                        onClick={() => setSecao("equipe")}
-                        disabled={secao === "equipe"}
-                        bg={secao === "equipe" ? "#1E3A8A" : "transparent"}
-                        color={secao === "equipe" ? "white" : "#1E3A8A"}
-                        border="1px solid #1E3A8A"
-                        className={styles.segment}
-                    >
-                        Sobre a Equipe
-                    </Button>
                 </ButtonGroup>
 
                 {secao === "codigo" && (
@@ -94,13 +84,6 @@ export default function SobrePage() {
                     <div>
                         <h1 className={styles.h1}>Sobre o Projeto</h1>
                         <p>A Imúnica tem como objetivo conscientizar, auxíliar e preparar para o contato com a desinformação. Ela surgiu com a motivação de: possibilitar a identificação de informações falsas por pessoas do público infantil. E tem impacto se usado em parceria com a comunidade.</p>
-                    </div>
-                )}
-
-                {secao === "equipe" && (
-                    <div>
-                        <h1 className={styles.h1}>Sobre a Equipe</h1>
-                        <p>A nossa equipe é composta por três integrantes, cada um responsável por uma parte do projeto.</p>
                     </div>
                 )}
             </div>

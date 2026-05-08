@@ -16,8 +16,6 @@ export default function EducativaPage() {
       <div className={styles.cards}>
         <Card.Root maxW="50%" overflow="hidden">
           <Image
-            minW="100%"
-            maxH="60%"
             className={styles.img}
             src="/image.games.png"
             alt="jogos"
@@ -31,7 +29,7 @@ export default function EducativaPage() {
           </Card.Body>
           <Card.Footer gap="2">
             <Button className={styles.linkButton} onClick={alerta}>
-              Ver Lista de Jogos
+              Lista de Jogos
             </Button>
           </Card.Footer>
         </Card.Root>
@@ -51,7 +49,7 @@ export default function EducativaPage() {
           </Card.Body>
           <Card.Footer gap="2">
             <Button className={styles.linkButton} onClick={alerta}>
-              Ver Lista de Conteúdos
+              Lista de Conteúdos
             </Button>
           </Card.Footer>
         </Card.Root>
