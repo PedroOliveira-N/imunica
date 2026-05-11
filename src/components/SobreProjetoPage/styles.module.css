@@ -1,0 +1,94 @@
+.projectSection {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.sectionDivider {
+    width: 90px;
+    height: 5px;
+
+    background-color: #1E3A8A;
+
+    border-radius: 999px;
+
+    margin: 18px auto 28px auto;
+}
+
+.introText {
+    text-align: center;
+
+    font-size: 1.05rem;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    line-height: 1.8;
+}
+
+.infoCard {
+    background-color: white;
+
+    border: 1px solid #dbe4ff;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    transition: 0.2s;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.infoCard:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.cardIcon {
+    font-size: 2rem;
+
+    color: #1E3A8A;
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    line-height: 1.8;
+}
+
+.subtitle {
+    margin-top: 18px;
+
+    color: #1E3A8A;
+}
+
+.paragraphs ul {
+    width: fit-content;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding-left: 18px;
+
+    text-align: left;
+
+    list-style-type: circle;
+}
