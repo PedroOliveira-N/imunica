@@ -1,54 +1,41 @@
-.projectSection {
-    width: 100%;
-    max-width: 1100px;
+.h1 {
+    font-size: xx-large;
+    color: #1E3A8A;
 }
 
-.sectionDivider {
+.cardsDaSecao {
     width: 90px;
     height: 5px;
-
-    background-color: #1E3A8A;
-
-    border-radius: 999px;
-
     margin: 18px auto 28px auto;
+    background-color: #1E3A8A;
+    border-radius: 999px;
 }
 
 .introText {
     text-align: center;
-
     font-size: 1.05rem;
-
     max-width: 850px;
-
     margin: 0 auto;
-
     line-height: 1.8;
 }
 
 .infoCard {
-    background-color: white;
-
     border: 1px solid #dbe4ff;
-
     border-radius: 18px;
-
     padding: 24px;
 
     display: flex;
     flex-direction: column;
-
     gap: 14px;
 
     transition: 0.2s;
-
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .infoCard:hover {
     transform: translateY(-5px);
 
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.288);
 }
 
 .cardIcon {
@@ -90,5 +77,5 @@
 
     text-align: left;
 
-    list-style-type: circle;
+    list-style-type: disc;
 }

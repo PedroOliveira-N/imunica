@@ -94,7 +94,6 @@ export default function SobrePage() {
 
         {secao === "projeto" && (
           <div>
-            <h1 className={styles.h1}>Sobre o Projeto</h1>
             <SobreProjetoPage/>
           </div>
         )}
