@@ -24,54 +24,52 @@ export default function EducativaPage() {
             sm: 1,
             md: 2,
           }}
-          spacing={{
-            base: 4,
-            md: 6,
-            lg: 8,
-          }}
+          gap="12px"
           width="100%"
           justifyItems="center"
+          mb={4}
         >
-          <Card.Root 
-            className={styles.cardHorizontal}
-            overflow="hidden"
-          >
-            <Image className={styles.img} src="/image.games.png" alt="jogos" objectFit='cover'/>
-            <Card.Body className={styles.cardContent} gap="2">
-              <Card.Title>Jogos Educativos</Card.Title>
-              <Card.Description>
-                Saiba mais sobre a desinformação digital através de jogos e
-                atividades interativas!
-              </Card.Description>
-            </Card.Body>
-            <Card.Footer gap="2">
-              <Button className={styles.linkButton} onClick={alerta}>
-                Lista de Jogos
-              </Button>
-            </Card.Footer>
+          <Card.Root className={styles.cardHorizontal}>
+            <div className={styles.parteHorizontal}>
+              <Image
+                className={styles.img}
+                src="/image.games.png"
+                alt="jogos"
+                objectFit="cover"
+              />
+              <Card.Body className={styles.cardContent} gap="2">
+                <Card.Title>Jogos Educativos</Card.Title>
+                <Card.Description>
+                  Saiba mais sobre a desinformação digital através de jogos e
+                  atividades interativas!
+                </Card.Description>
+
+                <Button className={styles.linkButton} onClick={alerta}>
+                  Lista de Jogos
+                </Button>
+              </Card.Body>
+            </div>
           </Card.Root>
 
-          <Card.Root 
-            className={styles.cardHorizontal}
-            overflow="hidden"
-          >
+          <Card.Root className={styles.cardHorizontal}>
+            <div className={styles.parteHorizontal}>
             <Image
               className={styles.img}
               src="/image.reading.png"
               alt="leitura"
+              objectFit="cover"
             />
-            <Card.Body gap="2">
+            <Card.Body className={styles.cardContent} gap="2">
               <Card.Title>Material de Leitura</Card.Title>
               <Card.Description>
                 Saiba mais sobre a desinformação digital através de conteúdo
                 informativo!
               </Card.Description>
-            </Card.Body>
-            <Card.Footer gap="2">
               <Button className={styles.linkButton} onClick={alerta}>
-                Lista de Conteúdos
+                  Lista de Jogos
               </Button>
-            </Card.Footer>
+            </Card.Body>
+            </div>
           </Card.Root>
         </SimpleGrid>
       </div>

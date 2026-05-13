@@ -6,38 +6,42 @@
     font-size: xx-large;
     color: #1E3A8A;
 }
+
+.cards {
+    gap: 12px;
+}
+
 .cardHorizontal {
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    width: 95%;
     max-width: 600px;
-
-    align-items: stretch;
+    max-height: 300px;
 }
 
 .img {
-    width: 170px;
+    width: 180px;
     min-width: 170px;
-
     height: 100%;
-
-    object-fit: cover;
     align-self: stretch;
 }
 
 .cardContent {
     flex: 1;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.cards {
-    width: 100%;
+.parteHorizontal {
+    display: flex;
+    flex-direction: row;
 }
 
 .linkButton {
     background-color: #1E3A8A;
     width: 100%;
     display: flex;
+    margin-top: 12px;
+    margin-bottom: 0;
 }
