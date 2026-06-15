@@ -51,7 +51,7 @@ export default function EducativaPage() {
             </div>
           </Card.Root>
 
-          <Card.Root className={styles.cardHorizontal}>
+          <Card.Root className={styles.cardHorizontal} mb='1'>
             <div className={styles.parteHorizontal}>
             <Image
               className={styles.img}
