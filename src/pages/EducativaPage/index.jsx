@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { Button, Card, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
@@ -44,9 +45,12 @@ export default function EducativaPage() {
                   atividades interativas!
                 </Card.Description>
 
-                <Button className={styles.linkButton} onClick={alerta}>
-                  Lista de Jogos
-                </Button>
+                <Link to="/area-educativa/catalogo-jogos">
+                  <Button className={styles.linkButton}>
+                    Lista de Jogos
+                  </Button>
+                </Link>
+
               </Card.Body>
             </div>
           </Card.Root>
@@ -66,7 +70,7 @@ export default function EducativaPage() {
                 informativo!
               </Card.Description>
               <Button className={styles.linkButton} onClick={alerta}>
-                  Lista de Jogos
+                  Lista de Leitura
               </Button>
             </Card.Body>
             </div>

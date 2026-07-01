@@ -22,8 +22,7 @@ export default function SobreProjetoPage() {
         desenvolvida para auxiliar crianças e adolescentes no combate à
         desinformação digital e às fake news.
       </Text>
-
-      {/* CARDS */}
+      
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 4 }}
         spacing={6}
