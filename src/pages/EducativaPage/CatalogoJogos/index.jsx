@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { Button, Card, Image, SimpleGrid } from "@chakra-ui/react";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function CatalogoJogos() {
   return (
     <div>
-      <h1 className={styles.header}>
-        Lista de Jogos
-      </h1>
+      <section className={styles.header}>
+        <h1 className={styles.h1}>Lista de Jogos</h1>
+
+        <Link to="/area-educativa" className={styles.backLink}>
+        <Button className={styles.backButton}>
+          <IoIosArrowRoundBack/>
+        </Button>
+        </Link>
+      </section>  
 
       <SimpleGrid
         columns={{
@@ -22,28 +29,29 @@ export default function CatalogoJogos() {
       >
         <Card.Root className={styles.cardHorizontal}>
           <div className={styles.parteHorizontal}>
-            <Image 
-                className={styles.img} 
-                alt="jogos" 
-                objectFit="cover"
-                src="/image.datadefenders.png" 
+            <Image
+              className={styles.img}
+              alt="jogos"
+              objectFit="cover"
+              src="/image.datadefenders.png"
             />
             <Card.Body className={styles.cardContent} gap="2">
               <Card.Title>Data Defenders</Card.Title>
               <Card.Description>
-                Jogo educativo de Tower Defense voltado para literacia midiática, ensinando jovens a avaliar notícias e combater desinformação em cenários de crise e conflito. 
+                Jogo educativo de Tower Defense voltado para literacia
+                midiática, ensinando jovens a avaliar notícias e combater
+                desinformação em cenários de crise e conflito.
               </Card.Description>
 
-
-                <Button 
+              <Button
                 as="a"
                 href="https://yo-media.itch.io/data-defenders"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.linkButton}
-                >
-                    Acessar Jogo
-                </Button>   
+              >
+                Acessar Jogo
+              </Button>
             </Card.Body>
           </div>
         </Card.Root>

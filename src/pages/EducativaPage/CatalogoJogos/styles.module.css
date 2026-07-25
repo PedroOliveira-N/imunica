@@ -2,11 +2,40 @@
     text-align: center;
     margin-bottom: 4%;
 }
+
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h1 {
     font-size: xx-large;
     color: #1E3A8A;
     text-align: center;
-    margin: 8px;
+    margin: 3px 3%;
+}
+
+.backLink {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+}
+
+.backButton {
+    width: 0%;
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.273);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.backButton:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
 }
 
 .cards {
