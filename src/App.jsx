@@ -6,6 +6,7 @@ import Header from './components/Header'
 import EducativaPage from './pages/EducativaPage'
 import SobrePage from './pages/SobrePage'
 import CatalogoJogos from './pages/EducativaPage/CatalogoJogos'
+import CatalogoLeitura from './pages/EducativaPage/CatalogoLeitura'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/sobre' element={<SobrePage/>}/>
 
           <Route path='/area-educativa/catalogo-jogos' element={<CatalogoJogos/>}/>
+          <Route path='/area-educativa/catalogo-leitura' element={<CatalogoLeitura/>}/>
         </Routes>
       </div>
     </div>

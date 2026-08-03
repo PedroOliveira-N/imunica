@@ -3,9 +3,6 @@ import styles from "./styles.module.css";
 import { Button, Card, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function EducativaPage() {
-  const alerta = () => {
-    alert("Esta Função Ainda em Desenvolvimento!");
-  };
 
   return (
     <div>
@@ -15,6 +12,9 @@ export default function EducativaPage() {
           Nesta página você encontrará o catálogo de ferramentas educativas
           pensadas para desenvolver uma espécie de "imunidade" sobre a
           desinformação.
+        </p>
+        <p className={styles.alerta}>
+          Os cookies e termos de uso de sites externos são de responsabilidade de seus respectivos proprietários.
         </p>
       </div>
 
@@ -69,9 +69,11 @@ export default function EducativaPage() {
                 Saiba mais sobre a desinformação digital através de conteúdo
                 informativo!
               </Card.Description>
-              <Button className={styles.linkButton} onClick={alerta}>
-                  Lista de Leitura
-              </Button>
+              <Link to="/area-educativa/catalogo-leitura">
+                  <Button className={styles.linkButton}>
+                    Lista de Leitura
+                  </Button>
+                </Link>
             </Card.Body>
             </div>
           </Card.Root>
